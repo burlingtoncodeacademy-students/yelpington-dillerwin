@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Diners:</h1>
+    <div id="diners">
+      <ul></ul>
+    </div>
+    <script>
+      fetch("/api/diners")
+        .then((res) => res.json())
+        .then(fillDiners);
+      //function to create list of diner names from diner json, which then displays as an html list
+      function fillDiners(diners) {
+        console.log(`inside fillDiners`);
+        let list = document.querySelector("#diners > ul");
+        for (let diner of diners) {
+          let item = document.createElement("li");
+          let html = `<a href="/diners/${diner.id}"> ${diner.name} </a>`;
+          item.innerHTML = html;
+          list.appendChild(item);
+        }
+      }
+    </script>
+  </body>
+</html>

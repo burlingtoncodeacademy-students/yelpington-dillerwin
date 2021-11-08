@@ -1,0 +1,15 @@
+{
+  "id": "red-arrow",
+  "name": "Red Arrow Diner",
+  "address": "61 Lowell St",
+  "town": "Manchester",
+  "state": "New Hampshire",
+  "zip": "03101",
+  "coordinates": [42.9935086, -71.4636055],
+  "number": "603-626-1118",
+  "hours": "24 Hours",
+  "notes": [
+    "Arguably the best diner ever",
+    "Makes the best reuben my dad has ever had"
+  ]
+}

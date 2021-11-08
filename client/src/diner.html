@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="App.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="diner">
+      <h2 id="name"></h2>
+      <div id="address"></div>
+      <div id="phone-number"></div>
+      <div id="hours"></div>
+      <div id="notes"></div>
+    </div>
+    <script>
+      let dinerId = document.location.pathname.split("/").splice(-1);
+      fetch("/api/" + dinerId)
+        .then((res) => res.json())
+        .then(fillDiner);
+
+      //creates page for each diner when it's called using info from json file
+      function fillDiner(diner) {
+        document.getElementById("name").textContent = diner.name;
+        document.getElementById(
+          "address"
+        ).textContent = `${diner.address}. ${diner.town}, ${diner.state}, ${diner.zip}`;
+        document.getElementById("phone-number").textContent = diner.number;
+        document.getElementById("hours").textContent = `Hours: ${diner.hours}`;
+        document.getElementById(
+          "notes"
+        ).textContent = `Notes: ${diner.notes.join(`, `)}`;
+      }
+    </script>
+  </body>
+</html>

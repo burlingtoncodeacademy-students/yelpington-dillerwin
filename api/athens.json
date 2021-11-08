@@ -1,0 +1,16 @@
+{
+  "id": "athens",
+  "name": "Athens Diner",
+  "address": "46 High Point Ctr",
+  "town": "Colchester",
+  "state": "Vermont",
+  "zip": "05446",
+  "coordinates": [44.5036718, -73.184801],
+  "number": "802-655-3455",
+  "hours": "6AM-2PM, closed Mondays and Tuesdays",
+  "notes": [
+    "Dad's work friends get breakfast here on Thursdays",
+    "Same menu as Henry's",
+    "Not quite as good as Henry's"
+  ]
+}

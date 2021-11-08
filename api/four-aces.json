@@ -1,0 +1,12 @@
+{
+  "id": "four-aces",
+  "name": "Four Aces Diner",
+  "address": "23 Bridge St",
+  "town": "West Lebanon",
+  "state": "New Hampshire",
+  "zip": "03784",
+  "coordinates": [43.6501609, -72.3145],
+  "number": "603-298-5515",
+  "hours": "7am-2pm",
+  "notes": ["Just over the bridge into New Hampshire", "Excellent food"]
+}

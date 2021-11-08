@@ -1,0 +1,12 @@
+{
+  "id": "village",
+  "name": "Village Restaurant",
+  "address": "74 S Main St",
+  "town": "Hardwick",
+  "state": "Vermont",
+  "zip": "05843",
+  "coordinates": [44.5041242, -72.3696713],
+  "number": "802-472-5701",
+  "hours": "6AM-8PM, closed Mondays",
+  "notes": ["A bit of a trek, but it's real tasty"]
+}
