@@ -16,7 +16,6 @@
     </div>
     <script>
       let dinerId = document.location.pathname.split("/").splice(-1);
-      console.log(dinerId);
       fetch("/api/" + dinerId)
         .then((res) => res.json())
         .then(fillDiner);
@@ -27,8 +26,8 @@
           "address"
         ).textContent = `${diner.address}. ${diner.town}, ${diner.state}, ${diner.zip}`;
         document.getElementById("phone-number").textContent = diner.number;
-        document.getElementById("hours").textContent = diner.hours;
-        document.getElementById("notes").textContent = diner.notes;
+        document.getElementById("hours").textContent = `Hours: ${diner.hours}`;
+        document.getElementById("notes").textContent = diner.notes.join(`, `);
       }
     </script>
   </body>

@@ -22,9 +22,9 @@
         for (let diner of diners) {
           let item = document.createElement("li");
           let html = `<a href="/diners/${diner.id}"> ${diner.name} </a>`;
+          item.innerHTML = html;
+          list.appendChild(item);
         }
-        item.innerHTML = html;
-        list.appendChild(item);
       }
     </script>
   </body>

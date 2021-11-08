@@ -21,6 +21,26 @@ app.get("/api", (req, res) => {
   res.sendFile(path.join(apiDir, "/diners.json"));
 });
 
+function allDiners() {
+  return fs
+    .readdirSync(apiDir)
+    .filter((file) => file.endsWith(".json"))
+    .map((file) => JSON.parse(fs.readFileSync(path.join(apiDir, file))))
+    .sort((a, b) => a.name - b.name);
+}
+
+app.get("/api/diners", (req, res) => {
+  console.log(`get diner list`);
+  let diners = allDiners();
+  let data = JSON.stringify(diners);
+  res.type("application/json").send(data);
+});
+
+app.get("/diners", (req, res) => {
+  console.log(`list of diners`);
+  res.sendFile(path.join(publicDir, "diners.html"));
+});
+
 app.get("/api/:dinerId", (req, res) => {
   console.log("specific restaurant");
   console.log(req.params.dinerId);
