@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Map from "./components/Map";
 
 function App() {
-  const [center, setCenter] = useState([44.4797018, -73.2240624]);
+  const [center, setCenter] = useState([44.0, -72.699997]);
   return (
     <div>
       <h1 className="title">Yelpington</h1>

@@ -4,7 +4,9 @@
   "address": "1251 Williston Rd",
   "town": "South Burlington",
   "state": "Vermont",
-  "phone number": "80-862-9203",
+  "phone number": "802-862-9203",
+  "zip": "05403",
+  "coordinates": [44.467162, -73.1765308],
   "hours": "10:30AM-12AM",
   "notes": [
     "Not a diner, but they deserve an honorable mention",

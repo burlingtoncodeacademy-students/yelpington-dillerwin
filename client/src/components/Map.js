@@ -1,10 +1,11 @@
 import { MapContainer, TileLayer } from "react-leaflet";
+import L from "leaflet";
 
 function Map(props) {
   return (
     <MapContainer
       center={props.center}
-      zoom={13}
+      zoom={8}
       style={{
         display: "flex",
         justifyContent: "center",
@@ -16,6 +17,7 @@ function Map(props) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
+      <Marker position={}
     </MapContainer>
   );
 }
