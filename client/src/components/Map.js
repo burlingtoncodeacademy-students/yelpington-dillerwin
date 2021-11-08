@@ -1,13 +1,16 @@
-import { MapContainer, TileLayer} from "react-leaflet";
-
+import { MapContainer, TileLayer } from "react-leaflet";
 
 function Map(props) {
-
   return (
     <MapContainer
       center={props.center}
       zoom={13}
-      style={{ height: "600px", width: "600px" }}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        height: "600px",
+        width: "600px",
+      }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

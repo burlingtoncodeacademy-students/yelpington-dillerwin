@@ -4,7 +4,8 @@
   "address": "23 Bridge St",
   "town": "West Lebanon",
   "state": "New Hampshire",
-  "phone number": "603-298-5515",
+  "zip": "03784",
+  "number": "603-298-5515",
   "hours": "7am-2pm",
   "notes": ["Just over the bridge into New Hampshire", "Excellent food"]
 }

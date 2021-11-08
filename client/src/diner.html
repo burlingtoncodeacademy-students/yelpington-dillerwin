@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="diner">
+      <h2 id="name"></h2>
+      <div id="address"></div>
+      <div id="phone-number"></div>
+      <div id="hours"></div>
+      <div id="notes"></div>
+    </div>
+    <script>
+      let dinerId = document.location.pathname.split("/").splice(-1);
+      console.log(dinerId);
+      fetch("/api/" + dinerId)
+        .then((res) => res.json())
+        .then(fillDiner);
+
+      function fillDiner(diner) {
+        document.getElementById("name").textContent = diner.name;
+        document.getElementById(
+          "address"
+        ).textContent = `${diner.address}. ${diner.town}, ${diner.state}, ${diner.zip}`;
+        document.getElementById("phone-number").textContent = diner.number;
+        document.getElementById("hours").textContent = diner.hours;
+        document.getElementById("notes").textContent = diner.notes;
+      }
+    </script>
+  </body>
+</html>
