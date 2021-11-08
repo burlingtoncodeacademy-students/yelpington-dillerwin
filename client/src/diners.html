@@ -15,7 +15,7 @@
       fetch("/api/diners")
         .then((res) => res.json())
         .then(fillDiners);
-
+      //function to create list of diner names from diner json, which then displays as an html list
       function fillDiners(diners) {
         console.log(`inside fillDiners`);
         let list = document.querySelector("#diners > ul");

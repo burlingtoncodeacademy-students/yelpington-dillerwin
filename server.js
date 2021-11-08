@@ -6,21 +6,23 @@ const port = process.env.PORT || 5000;
 const publicDir = path.resolve("./client/src");
 const apiDir = path.resolve("./api");
 
+//sets port for app to run on
 app.listen(port, () => {
   console.log(`Hearing you on port ${port}`);
 });
 
+//sets static page for homepage
 app.use(express.static("./client/build"));
 
-app.get("/", (req, res) => {
-  res.send(console.log(`homepage`));
-});
+app.use(express.urlencoded({ extended: true }));
 
+//sets get for /api track
 app.get("/api", (req, res) => {
   console.log(`viewing api`);
   res.sendFile(path.join(apiDir, "/diners.json"));
 });
 
+//function to collate diner data into single json
 function allDiners() {
   return fs
     .readdirSync(apiDir)
@@ -29,6 +31,7 @@ function allDiners() {
     .sort((a, b) => a.name - b.name);
 }
 
+//get for list json of all diners
 app.get("/api/diners", (req, res) => {
   console.log(`get diner list`);
   let diners = allDiners();
@@ -36,23 +39,23 @@ app.get("/api/diners", (req, res) => {
   res.type("application/json").send(data);
 });
 
+//html page for list of diners
 app.get("/diners", (req, res) => {
   console.log(`list of diners`);
   res.sendFile(path.join(publicDir, "diners.html"));
 });
 
+//api get for individual diner pages
 app.get("/api/:dinerId", (req, res) => {
   console.log("specific restaurant");
-  console.log(req.params.dinerId);
   let filePath = path.join(apiDir, req.params.dinerId + ".json");
-  console.log(filePath);
   res.sendFile(filePath);
 });
 
-app.get("/:dinerId", (req, res) => {
+//html get for individual diner pages
+app.get("/diners/:dinerId", (req, res) => {
   console.log("specific diner html");
   let filePath = path.join(apiDir, req.params.dinerId + ".json");
-  console.log(filePath);
   if (fs.existsSync(filePath)) {
     let htmlFile = path.join(publicDir, "diner.html");
     res.sendFile(htmlFile);
