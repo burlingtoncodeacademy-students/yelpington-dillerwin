@@ -2,7 +2,6 @@ import "./App.css";
 import React from "react";
 import { useState, useEffect } from "react";
 import Map from "./components/Map";
-import { Route, Switch, Link, Redirect } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 
