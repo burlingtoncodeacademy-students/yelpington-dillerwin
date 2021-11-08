@@ -1,0 +1,10 @@
+{
+  "id": "common",
+  "name": "The Common Cafe",
+  "address": "12 Depot Square",
+  "town": "Northfield",
+  "state": "Vermont",
+  "phone number": "802-485-4011",
+  "hours": "Mon, Wed-Fri:6AM-2PM, Sat & Sun: 7AM-1PM, closed Tuesday",
+  "notes": ["Tasty little place in the town center"]
+}

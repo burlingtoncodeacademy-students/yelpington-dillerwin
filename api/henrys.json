@@ -1,0 +1,14 @@
+{
+  "id": "henrys",
+  "name": "Henry's Diner",
+  "address": "155 Bant St",
+  "town": "Burlington",
+  "state": "Vermont",
+  "phone number": "802-862-9010",
+  "hours": "6:15AM-1:45PM",
+  "notes": [
+    "This is my dad's favorite diner",
+    "Good coffee",
+    "Nice location in downtown"
+  ]
+}
