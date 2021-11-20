@@ -8,8 +8,7 @@ function NavBar(props) {
   function handleClick(event) {
     event.preventDefault();
     let targetId = event.target.id;
-    console.log(targetId);
-    window.location = `/diners/${targetId}`;
+    props.setdiner(targetId);
   }
 
   //collects diner names into list and places them into the Nav bar as links
@@ -30,7 +29,12 @@ function NavBar(props) {
 
   return (
     <div className="diners">
-      <ul>{diners}</ul>
+      <ul onClick={handleClick}>
+        <li className="dinerList" id="home">
+          Home
+        </li>
+        {diners}
+      </ul>
     </div>
   );
 }

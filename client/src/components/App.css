@@ -1,0 +1,40 @@
+.title {
+  text-align: center;
+}
+
+.mapContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.diners {
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+
+.dinerList {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+
+.dinerList:hover {
+  cursor: pointer;
+  color: aqua;
+}
+
+.homeLink {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+.dinerName {
+  text-align: center;
+}
+
+.dinerWrapper {
+  float: left;
+}
