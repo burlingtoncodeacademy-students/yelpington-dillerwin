@@ -17,7 +17,7 @@ function App() {
       <div id="wrapper">
         <NavBar setdiner={setDiner} />
         <div className="mapContainer">
-          <Map center={center} />
+          <Map center={center} zoom={zoom} />
         </div>
         <div className="dinerWrapper">
           <Diner diner={diner} setzoom={setZoom} setcenter={setCenter} />

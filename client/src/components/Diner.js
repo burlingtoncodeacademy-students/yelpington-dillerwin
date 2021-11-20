@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState, useEFfect } from "react";
+import React, { useState, useEffect } from "react";
 
 function Diner(props) {
   //sets up diner bones for page use
@@ -26,25 +25,29 @@ function Diner(props) {
         setDiner(dinerContent);
         props.setzoom(18);
         props.setcenter(dinerContent.coordinates);
-        setDinerNotes(dinerContent.notes.map((item) => <li>{item}</li>));
+        setDinerNotes(
+          dinerContent.notes.map((item) => <li key={item}>{item}</li>)
+        );
 
         //sets zoom and center on map to diner's coords
       });
+    //props.diner is needed here, no array creates recursion and empty array results in no output at all ¯\_(ツ)_/¯
   }, [props.diner]);
 
   if (props.diner === "home") {
+    props.setzoom(8);
     return null;
   } else {
     return (
       <div id="dinerContent">
-        <h1>{diner.name}</h1>
-        <h2>{`${diner.address}, ${diner.town}, ${diner.state}, ${diner.zip}`}</h2>
-        <h2>Phone: {diner.number}</h2>
-        <h2>Hours: {diner.hours}</h2>
-        <h2>
+        <h3>{diner.name}</h3>
+        <h4>{`${diner.address}, ${diner.town}, ${diner.state}, ${diner.zip}`}</h4>
+        <h4>Phone: {diner.number}</h4>
+        <h4>Hours: {diner.hours}</h4>
+        <h4>
           Notes:
           <ul>{dinerNotes}</ul>
-        </h2>
+        </h4>
       </div>
     );
   }

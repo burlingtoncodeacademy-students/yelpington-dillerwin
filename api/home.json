@@ -1,0 +1,12 @@
+{
+  "id": "home",
+  "name": "Home",
+  "address": "1 Vermont",
+  "town": "All of them",
+  "state": "Vermont",
+  "number": "802-BER-NIE1",
+  "zip": "yes",
+  "coordinates": [44.0, -72.699997],
+  "hours": "Always open baybee",
+  "notes": ["The Green Mountain State", "Great maple syrup"]
+}

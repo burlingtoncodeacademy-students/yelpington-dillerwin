@@ -19,7 +19,12 @@ function NavBar(props) {
         .then((dinerList) => {
           setDiners(
             dinerList.map((file) => (
-              <li onClick={handleClick} className="dinerList" id={file.id}>
+              <li
+                key={file.id}
+                onClick={handleClick}
+                className="dinerList"
+                id={file.id}
+              >
                 {file.name}
               </li>
             ))

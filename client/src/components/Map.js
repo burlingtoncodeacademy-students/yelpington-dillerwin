@@ -1,17 +1,23 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L, { map } from "leaflet";
-import { Link } from "react-router-dom";
 
 function Map(props) {
+  function MyComponent({ center, zoom }) {
+    const map = useMap();
+    map.setView(center, zoom);
+    return null;
+  }
+
   return (
     <MapContainer
       center={props.center}
-      zoom={8}
+      zoom={props.zoom}
       style={{
         height: "600px",
         width: "600px",
       }}
     >
+      <MyComponent center={props.center} zoom={props.zoom} />
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
