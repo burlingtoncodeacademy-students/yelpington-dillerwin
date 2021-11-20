@@ -33,6 +33,7 @@ function Diner(props) {
         );
       });
     //props.diner is needed here, no array creates recursion and empty array results in no output at all ¯\_(ツ)_/¯
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.diner]);
 
   //hides diner info and sets zoom back to state level. home.json also has its coords set to the default center, so the map zooms back out

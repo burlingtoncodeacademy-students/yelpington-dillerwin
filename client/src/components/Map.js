@@ -1,12 +1,4 @@
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMap,
-  useMapEvent,
-} from "react-leaflet";
-import L, { map } from "leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 
 function Map(props) {
   function MyComponent({ center, zoom }) {

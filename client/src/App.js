@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Map from "./components/Map";
 import "./components/App.css";
 import Diner from "./components/Diner";
