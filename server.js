@@ -3,7 +3,6 @@ const app = express();
 const fs = require("fs");
 const path = require("path");
 const port = process.env.PORT || 5000;
-const publicDir = path.resolve("./client/src");
 const apiDir = path.resolve("./api");
 
 //sets port for app to run on
@@ -36,11 +35,6 @@ app.get("/api/diners", (req, res) => {
   let diners = allDiners();
   let data = JSON.stringify(diners);
   res.type("application/json").send(data);
-});
-
-//html page for list of diners
-app.get("/diners", (req, res) => {
-  res.sendFile(path.join(publicDir, "diners.html"));
 });
 
 //api get for individual diner pages

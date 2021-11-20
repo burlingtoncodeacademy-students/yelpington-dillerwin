@@ -23,21 +23,24 @@ function Diner(props) {
       .then((dinerContent) => {
         //sets the diner page with info from correct json
         setDiner(dinerContent);
-        props.setzoom(18);
+        //zooms map to closer view
+        props.setzoom(17);
+        //centers map on diner location
         props.setcenter(dinerContent.coordinates);
+        //creates list of the notes on the diners
         setDinerNotes(
           dinerContent.notes.map((item) => <li key={item}>{item}</li>)
         );
-
-        //sets zoom and center on map to diner's coords
       });
     //props.diner is needed here, no array creates recursion and empty array results in no output at all ¯\_(ツ)_/¯
   }, [props.diner]);
 
+  //hides diner info and sets zoom back to state level. home.json also has its coords set to the default center, so the map zooms back out
   if (props.diner === "home") {
     props.setzoom(8);
     return null;
   } else {
+    //if not on "home", creates div with information on the diner
     return (
       <div id="dinerContent">
         <h3>{diner.name}</h3>
