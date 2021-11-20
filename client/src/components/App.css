@@ -38,3 +38,8 @@
 .dinerWrapper {
   float: left;
 }
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+}

@@ -15,12 +15,14 @@ function App() {
     <div>
       <h1 className="title">Yelpington</h1>
       <div id="wrapper">
-        <NavBar setdiner={setDiner} />
-        <div className="mapContainer">
-          <Map center={center} zoom={zoom} />
+        <div id="infoWrapper">
+          <NavBar setdiner={setDiner} />
+          <div className="dinerWrapper">
+            <Diner diner={diner} setzoom={setZoom} setcenter={setCenter} />
+          </div>
         </div>
-        <div className="dinerWrapper">
-          <Diner diner={diner} setzoom={setZoom} setcenter={setCenter} />
+        <div className="mapContainer">
+          <Map center={center} zoom={zoom} setdiner={setDiner} />
         </div>
       </div>
     </div>
