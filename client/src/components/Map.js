@@ -14,6 +14,7 @@ function Map(props) {
       style={{
         height: "600px",
         width: "600px",
+        borderRadius: "5%",
       }}
     >
       <MyComponent center={props.center} zoom={props.zoom} />
@@ -25,6 +26,9 @@ function Map(props) {
       <Marker
         id="als"
         position={[44.467162, -73.1765308]}
+        onMouseOver={(event) => {
+          event.target.openPopup();
+        }}
         eventHandlers={{
           click: (event) => {
             props.setdiner(`als`);

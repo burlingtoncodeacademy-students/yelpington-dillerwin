@@ -1,36 +1,60 @@
+body {
+  background-color: #26532b;
+}
+
+colors {
+  hunter: #26532b;
+  maximum-blue-green: #5abcb9;
+  xiketic: #1c0f13;
+  english-violet: #3d315b;
+  space-cadet: #1d3461;
+}
+
 .title {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 300%;
+  color: #1c0f13;
+}
+
+.headerImage {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  
 }
 
 .mapContainer {
   display: flex;
   justify-content: center;
+  position: absolute;
+  left: 30vw;
 }
 
 .diners {
   display: flex;
   flex-direction: column;
   float: left;
+  background-color: #1d3461;
+  border-radius: 5%;
+  width: fit-content;
+  position: relative;
+  left: 5vw;
+  padding-right: 1vw;
 }
 
 .dinerList {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: black;
+  color: #5abcb9;
+  border-radius: 5%;
 }
 
 .dinerList:hover {
   cursor: pointer;
   color: aqua;
-}
-
-.homeLink {
-  display: flex;
-  text-decoration: none;
-  color: black;
 }
 
 .dinerName {
@@ -39,9 +63,18 @@
 
 .dinerWrapper {
   float: left;
+  position: relative;
+  top: 30vh;
+  right: 10vw;
+  width: 24vw;
+  color: #5abcb9;
+  border-radius: 5%;
+  background-color: #3d315b;
+  padding-left: 1vw;
 }
 
 .infoWrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
 }

@@ -13,6 +13,11 @@ function App() {
 
   return (
     <div>
+      <img
+        className="headerImage"
+        src="https://www.henrysdinervt.com/GalleryImages/116340/lg_b42840_DSC_3029.jpg"
+        alt="Henry's Diner"
+      />
       <h1 className="title">Yelpington</h1>
       <div id="wrapper">
         <div id="infoWrapper">
