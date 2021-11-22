@@ -24,11 +24,9 @@ function Map(props) {
       />
       {/* markers for diners */}
       <Marker
+        // each marker has an id matching their diners, the coords for its diner, and an eventHandler to activate the diner's infobox
         id="als"
         position={[44.467162, -73.1765308]}
-        onMouseOver={(event) => {
-          event.target.openPopup();
-        }}
         eventHandlers={{
           click: (event) => {
             props.setdiner(`als`);

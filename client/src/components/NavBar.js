@@ -2,10 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 function NavBar(props) {
+  //variable to store and display diner list
   const [diners, setDiners] = useState(``);
 
   //handles diner name in Nav bar being clicked, redirects to individual page
   function handleClick(event) {
+    //prevents default click behavior
     event.preventDefault();
     //sets diner id
     let targetId = event.target.id;
@@ -47,6 +49,7 @@ function NavBar(props) {
         <li className="dinerList" id="home">
           Home
         </li>
+        {/* display list stored in diners state */}
         {diners}
       </ul>
     </div>

@@ -1,5 +1,6 @@
 body {
   background-color: #26532b;
+  padding: 0;
 }
 
 colors {
@@ -22,7 +23,6 @@ colors {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  
 }
 
 .mapContainer {
