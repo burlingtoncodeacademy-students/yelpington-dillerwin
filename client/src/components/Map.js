@@ -7,13 +7,6 @@ function Map(props) {
     return null;
   }
 
-  function handleClick(event) {
-    console.log(`clicked`);
-    event.preventDefault();
-    let targetId = event.target.id;
-    props.setdiner(targetId);
-  }
-
   return (
     <MapContainer
       center={props.center}
